@@ -15,14 +15,15 @@
 package com.rithikneil.algovisualizer;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 
 import com.rithikneil.algovisualizer.algorithm.Algorithm;
 
@@ -65,7 +66,7 @@ public class CodeFragment extends Fragment {
                     addCodeItem(AlgorithmCode.CODE_INSERTION_SORT, "Insertion sort");
                     break;
                 case Algorithm.SELECTION_SORT:
-                    addCodeItem(AlgorithmCode.CODE_SELECTION_SORT,"Selection sort");
+                    addCodeItem(AlgorithmCode.CODE_SELECTION_SORT, "Selection sort");
                     break;
                 case Algorithm.QUICKSORT:
                     addCodeItem(AlgorithmCode.CODE_QUICKSORT, "Quicksort");
@@ -138,7 +139,7 @@ public class CodeFragment extends Fragment {
         @Override
         public boolean onTouch(View v, MotionEvent event) {
             int action = event.getAction();
-            switch (action){
+            switch (action) {
                 case MotionEvent.ACTION_DOWN:
                     downX = event.getX();
                     downY = event.getY();
@@ -147,7 +148,7 @@ public class CodeFragment extends Fragment {
                     float dx = Math.abs(event.getX() - downX);
                     float dy = Math.abs(event.getY() - downY);
 
-                    if(dx > dy){
+                    if (dx > dy) {
                         v.getParent().requestDisallowInterceptTouchEvent(true);
                     }
 

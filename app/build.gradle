@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'io.fabric'
 
 android {
     compileSdkVersion rootProject.compileSdkVersion
@@ -18,7 +17,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
-            ext.enableCrashlytics = false
             versionNameSuffix "-debug"
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
@@ -32,15 +30,13 @@ repositories {
 }
 
 dependencies {
+    implementation 'androidx.drawerlayout:drawerlayout:1.1.1'
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
     compile "com.android.support:design:$rootProject.supportLibraryVersion"
     compile 'com.roughike:bottom-bar:1.3.4'
     compile 'thereisnospon.codeview:codeview:0.3.1'
     compile 'com.anjlab.android.iab.v3:library:1.0.+'
-    compile('com.crashlytics.sdk.android:crashlytics:2.6.5@aar') {
-        transitive = true
-    }
 
 
 }

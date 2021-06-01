@@ -14,24 +14,27 @@
 
 package com.rithikneil.algovisualizer;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.annotation.Nullable;
-import android.support.design.widget.AppBarLayout;
-import android.support.design.widget.CoordinatorLayout;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toolbar;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+
+import com.google.android.material.appbar.AppBarLayout;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.rithikneil.algovisualizer.algorithm.Algorithm;
 import com.rithikneil.algovisualizer.algorithm.graph.GraphTraversalAlgorithm;
 import com.rithikneil.algovisualizer.algorithm.list.LinkedList;
@@ -123,6 +126,7 @@ public class VisualAlgoFragment extends Fragment {
         this.startCommand = startCommand;
     }
 
+    @SuppressLint("RestrictedApi")
     public void setupFragment(String algorithmKey) {
 
         viewPager.setOffscreenPageLimit(3);
@@ -141,7 +145,7 @@ public class VisualAlgoFragment extends Fragment {
         View toolbar = LayoutInflater.from(getActivity()).inflate(R.layout.toolbar, appBarLayout, false);
         appBarLayout.addView(toolbar);
 
-        ((AppCompatActivity) getActivity()).setSupportActionBar((Toolbar) toolbar);
+        ((AppCompatActivity) getActivity()).setSupportActionBar((androidx.appcompat.widget.Toolbar) toolbar);
         ActionBar ab = ((AppCompatActivity) getActivity()).getSupportActionBar();
         assert ab != null;
         ab.setTitle("");

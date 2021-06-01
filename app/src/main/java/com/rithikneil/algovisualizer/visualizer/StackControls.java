@@ -15,13 +15,13 @@
 package com.rithikneil.algovisualizer.visualizer;
 
 import android.content.Context;
-import android.support.design.widget.FloatingActionButton;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.rithikneil.algovisualizer.R;
 import com.rithikneil.algovisualizer.algorithm.list.Stack;
 import com.roughike.bottombar.BottomBar;

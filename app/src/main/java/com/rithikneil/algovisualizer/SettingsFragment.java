@@ -6,13 +6,10 @@ import android.preference.EditTextPreference;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
-import android.support.annotation.Nullable;
+
+import androidx.annotation.Nullable;
 
 import com.rithikneil.algovisualizer.algorithm.Algorithm;
-
-/**
- * Created by naman on 13/9/17.
- */
 
 public class SettingsFragment extends PreferenceFragment implements SharedPreferences.OnSharedPreferenceChangeListener {
 
