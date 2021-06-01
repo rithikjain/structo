@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.naman14.algovisualizer" >
+    package="com.rithikneil.algovisualizer" >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="com.android.vending.BILLING" />
@@ -11,9 +11,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:name=".AlgorithmVisualizerApp">
+        android:name="com.rithikneil.algovisualizer.AlgorithmVisualizerApp">
         <activity
-            android:name=".MainActivity"
+            android:name="com.rithikneil.algovisualizer.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
@@ -22,13 +22,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DonateActivity"/>
-        <activity android:name=".SettingsActivity"/>
-
-        <!--use your own api key for fabric-->
-        <meta-data
-            android:name="io.fabric.ApiKey"
-            android:value="@string/fabric_api_key" />
+        <activity android:name="com.rithikneil.algovisualizer.SettingsActivity"/>
     </application>
 
 </manifest>

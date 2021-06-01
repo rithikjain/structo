@@ -29,13 +29,6 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:background="@color/colorPrimary">
-
-            <ImageView
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:src="@drawable/icon"
-                android:layout_gravity="center_vertical|left"
-                android:layout_marginLeft="20dp" />
         </FrameLayout>
 
 

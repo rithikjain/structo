@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AlgorithmVisualizer</string>
+    <string name="app_name">Structo</string>
     <string name="action_settings">Settings</string>
     <string name="report_bugs">Report any bugs <u> here </u></string>
 </resources>
