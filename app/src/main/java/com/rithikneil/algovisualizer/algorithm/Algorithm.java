@@ -28,22 +28,14 @@ public class Algorithm extends HandlerThread {
 
     public static final String KEY_ALGORITHM = "key_algorithm";
     public static final String COMMAND_START_ALGORITHM = "start";
-    public static final String BUBBLE_SORT = "bubble_sort";
-    public static final String INSERTION_SORT = "insertion_sort";
-    public static final String SELECTION_SORT = "selection_sort";
-    public static final String QUICKSORT = "quicksort";
     public static final String BINARY_SEARCH = "binary_search";
     public static final String LINEAR_SEARCH = "linear_search";
     public static final String BST_INSERT = "bst_insert";
     public static final String BST_SEARCH = "bst_search";
     public static final String LINKED_LIST = "linked_list";
     public static final String STACK = "stack";
-    public static final String QUEUE = "queue";
     public static final String BFS = "bfs";
     public static final String DFS = "dfs";
-    public static final String DIJKSTRA = "dijkstra";
-    public static final String BELLMAN_FORD = "bellman_ford";
-    public static final String N_QUEENS = "n_queens";
 
     public LogFragment logFragment;
     public Activity activity;
@@ -56,7 +48,7 @@ public class Algorithm extends HandlerThread {
 
     private Handler workerHandler;
 
-    private static int INTERVAL = 500;
+    private static int INTERVAL = 1000;
 
     public Algorithm() {
         super("");
@@ -139,7 +131,7 @@ public class Algorithm extends HandlerThread {
     }
 
     public void clearLog() {
-        if (logFragment!=null) {
+        if (logFragment != null) {
             activity.runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
@@ -154,7 +146,7 @@ public class Algorithm extends HandlerThread {
         for (int i : array) {
             arrayString = arrayString.concat(" " + String.valueOf(i) + " ");
         }
-        addLog(message + "[ "+arrayString +" ] total items - "+ array.length);
+        addLog(message + "[ " + arrayString + " ] total items - " + array.length);
     }
 
     public void setCompletionListener(AlgoCompletionListener completionListener) {

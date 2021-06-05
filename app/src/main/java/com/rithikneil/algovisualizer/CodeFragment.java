@@ -1,17 +1,3 @@
-/*
- * Copyright (C) 2016 Naman Dwivedi
- *
- * Licensed under the GNU General Public License v3
- *
- * This is free software: you can redistribute it and/or modify it
- * under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
- *
- * This software is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
- * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
- * See the GNU General Public License for more details.
- */
-
 package com.rithikneil.algovisualizer;
 
 import android.os.Bundle;
@@ -59,18 +45,6 @@ public class CodeFragment extends Fragment {
         if (codeLayout != null) {
             codeLayout.removeAllViews();
             switch (key) {
-                case Algorithm.BUBBLE_SORT:
-                    addCodeItem(AlgorithmCode.CODE_BUBBLE_SORT, "Bubble sort");
-                    break;
-                case Algorithm.INSERTION_SORT:
-                    addCodeItem(AlgorithmCode.CODE_INSERTION_SORT, "Insertion sort");
-                    break;
-                case Algorithm.SELECTION_SORT:
-                    addCodeItem(AlgorithmCode.CODE_SELECTION_SORT, "Selection sort");
-                    break;
-                case Algorithm.QUICKSORT:
-                    addCodeItem(AlgorithmCode.CODE_QUICKSORT, "Quicksort");
-                    break;
                 case Algorithm.BST_SEARCH:
                     addCodeItem(AlgorithmCode.CODE_BST_SEARCH, "BST Search");
                     break;
@@ -98,12 +72,6 @@ public class CodeFragment extends Fragment {
                 case Algorithm.DFS:
                     addCodeItem(AlgorithmCode.CODE_GRAPH_DFS, "Depth first search");
                     break;
-                case Algorithm.BELLMAN_FORD:
-                    addCodeItem(AlgorithmCode.CODE_BELLMAN_FORD, "Bellman Ford");
-                    break;
-                case Algorithm.DIJKSTRA:
-                    addCodeItem(AlgorithmCode.CODE_DIJKSTRA, "Dijkstra");
-                    break;
             }
         }
 
@@ -117,7 +85,7 @@ public class CodeFragment extends Fragment {
 
         titleText.setText(title);
 
-        codeView.setTheme(CodeViewTheme.GITHUB);
+        codeView.setTheme(CodeViewTheme.ANDROIDSTUDIO);
         codeView.setHorizontalScrollBarEnabled(true);
 
         codeView.setOnTouchListener(new HorizontalMoveListener());

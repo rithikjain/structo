@@ -103,6 +103,7 @@ public class AlgoDescriptionFragment extends Fragment {
                 String key = (String) keys.next();
                 title.setText(key);
 
+                // Complexity
                 if (dataObject.get(key) instanceof JSONObject) {
                     JSONObject jsonObject = dataObject.getJSONObject(key);
                     String descString = "";
@@ -119,7 +120,9 @@ public class AlgoDescriptionFragment extends Fragment {
                     }
                     desc.setText(Html.fromHtml(descString));
 
-                } else if (dataObject.get(key) instanceof JSONArray) {
+                }
+                // Applications
+                else if (dataObject.get(key) instanceof JSONArray) {
                     JSONArray array = dataObject.getJSONArray(key);
                     String descString = "";
 
@@ -130,7 +133,9 @@ public class AlgoDescriptionFragment extends Fragment {
                     }
                     desc.setText(Html.fromHtml(descString));
 
-                } else if (dataObject.get(key) instanceof String) {
+                }
+                // Normal text
+                else if (dataObject.get(key) instanceof String) {
                     desc.setText(Html.fromHtml(dataObject.getString(key)));
                 }
 

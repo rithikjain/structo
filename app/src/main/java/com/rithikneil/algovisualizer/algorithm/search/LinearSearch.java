@@ -11,10 +11,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-/**
- * Created by mayank on 27/11/16.
- */
-
 public class LinearSearch extends Algorithm implements DataHandler {
 
     private BinarySearchVisualizer visualizer;

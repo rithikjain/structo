@@ -1,17 +1,3 @@
-/*
- * Copyright (C) 2016 Naman Dwivedi
- *
- * Licensed under the GNU General Public License v3
- *
- * This is free software: you can redistribute it and/or modify it
- * under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
- *
- * This software is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
- * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
- * See the GNU General Public License for more details.
- */
-
 package com.rithikneil.algovisualizer;
 
 import android.annotation.SuppressLint;
@@ -159,13 +145,13 @@ public class VisualAlgoFragment extends Fragment {
                 visualizer = new BinarySearchVisualizer(getActivity());
                 appBarLayout.addView(visualizer);
                 algorithm = new BinarySearch((BinarySearchVisualizer) visualizer, getActivity(), logFragment);
-                ((BinarySearch) algorithm).setData(DataUtils.createArray(15, true));
+                ((BinarySearch) algorithm).setData(DataUtils.createArray(10, true));
                 break;
             case Algorithm.LINEAR_SEARCH:
                 visualizer = new BinarySearchVisualizer(getActivity());
                 appBarLayout.addView(visualizer);
                 algorithm = new LinearSearch((BinarySearchVisualizer) visualizer, getActivity(), logFragment);
-                ((LinearSearch) algorithm).setData(DataUtils.createArray(15, false));
+                ((LinearSearch) algorithm).setData(DataUtils.createArray(10, false));
                 break;
             case Algorithm.LINKED_LIST:
                 visualizer = new LinkedListVisualizer(getActivity());
@@ -197,8 +183,7 @@ public class VisualAlgoFragment extends Fragment {
                 visualizer = null;
         }
 
-        Algorithm.setInterval(Integer.parseInt(PreferenceManager.getDefaultSharedPreferences(getActivity())
-                .getString(SettingsFragment.KEY_INTERVAL, "500")));
+        Algorithm.setInterval(1000);
         algorithm.setStarted(false);
         fab.setImageResource(R.drawable.ic_play_arrow_white_24dp);
         logFragment.clearLog();
